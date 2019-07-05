@@ -32,16 +32,15 @@
 //Code Here
 class Employee {
   constructor(first_name, last_name, email, age) {
-    this.first_name = first_name
-    this.last_name = last_name
-    this.email = email
-    this.age = age
-    }
-    makeWidget() {
-      return `${this.first_name} ${this.last_name} Widget`
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+  }
+  makeWidget() {
+    return `${this.first_name} ${this.last_name} Widget`;
   }
 }
-
 
 ////////// PROBLEM 2 //////////
 
@@ -61,17 +60,16 @@ class Employee {
 //Code Here
 class Manager extends Employee {
   constructor(first_name, last_name, email, age, reports) {
-    super(first_name, last_name, email, age)
-      this.reports = []
+    super(first_name, last_name, email, age);
+    this.reports = [];
   }
-  hire(employee){
-    this.reports.push(employee)
+  hire(employee) {
+    this.reports.push(employee);
   }
-  fire(index){
-    this.reports.splice(index, 1)
+  fire(index) {
+    this.reports.splice(index, 1);
   }
 }
-
 
 ////////// PROBLEM 3 //////////
 
@@ -95,15 +93,47 @@ class Manager extends Employee {
 */
 
 //Code Here
-class ProgressiveManager extends Manager{
-  constructor(first_name, last_name, email, age, reports, title, bonus){
-    super(first_name, last_name, email, age, reports)
-    this.title = "Not a manager"
-    this.bonus = 0
+class ProgressiveManager extends Manager {
+  constructor(first_name, last_name, email, age, reports, title, bonus) {
+    super(first_name, last_name, email, age, reports);
+    this._title = title;
+    this._bonus = bonus;
+  }
+
+  get title() {
+    if (this.reports === 0 || this.reports === null) {
+      return "Not a manager";
+    } else if (this.reports >= 1 && this.reports <= 3) {
+      return "Barely Manager";
+    } else if (this.reports >= 4 && this.reports <= 10) {
+      return "Mostly Manager";
+    } else if (this.reports >= 11 && this.reports <= 50) {
+      return "Manager";
+    } else if (this.reports >= 51 && this.reports <= 100) {
+      return "Manager Plus";
+    } else if (this.reports > 100)
+      return "Bestest Manager";
+  }
+  set title(temptitle) {
+    this._title = temptitle;
+  }
+
+  get bonus() {
+    
   }
 }
-
-
+// setTitle() {
+//   if (reports === 0 || reports === null) {
+//     this.title = "Not a manager"
+//   } else if (reports >= 1 && reports <= 3) {
+//     this.title = "Barely Manager"
+//   } else if (reports >= 4 && reports <= 10) {
+//     this.title = "Mostly Manager"
+//   } else if (reports >= 11 && reports <= 50) {
+//     this.title = "Manager"
+//   } else if (reports >= 51 && reports <= 100) {
+//     this.title = "Manager Plus"
+//   } else this.title = "Bestest Manager"
 
 ////////// PROBLEM 4 - Black Diamond //////////
 
@@ -129,5 +159,3 @@ class ProgressiveManager extends Manager{
 */
 
 //Code Here
-
-
