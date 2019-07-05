@@ -30,6 +30,18 @@
 */
 
 //Code Here
+class Employee {
+  constructor(first_name, last_name, email, age, makeWidget) {
+    first_name = this.first_name
+    last_name = this.last_name
+    email = this.email
+    age = this.age
+    makeWidget = this.makeWidget
+    }
+    makeWidget() {
+      return `${first} ${last} Widget`
+  }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -48,6 +60,7 @@
 */
 
 //Code Here
+
 
 
 ////////// PROBLEM 3 //////////
