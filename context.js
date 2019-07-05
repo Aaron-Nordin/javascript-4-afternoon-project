@@ -41,14 +41,13 @@ class Animal {
     this.species = species
     this.food = food
   }
-  animal1 = new Animal("tiger", "helicopter", "you")
-
   eat() {
     return this.name + ' is a ' + this.species + ' and likes to eat ' + this.food;
   }
 }
 
 //Code Here
+let animal1 = new Animal("tiger", "helicopter", "you")
 
 
 
@@ -69,7 +68,7 @@ let who = {
 }
 
 //Code Here
-
+let whoSaysHi = sayHi.bind(who)
 
 
 ////////// PROBLEM 4 //////////
