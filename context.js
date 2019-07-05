@@ -20,7 +20,13 @@
   
 
 //Code Here
-
+let user = {
+  username: "aaron",
+  email: "aaron@blah",
+  getUsername: function () {
+    return this.username
+  }
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -35,6 +41,7 @@ class Animal {
     this.species = species
     this.food = food
   }
+  animal1 = new Animal("tiger", "helicopter", "you")
 
   eat() {
     return this.name + ' is a ' + this.species + ' and likes to eat ' + this.food;

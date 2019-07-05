@@ -96,8 +96,10 @@ class Manager extends Employee {
 
 //Code Here
 class ProgressiveManager extends Manager{
-  constructor(){
-    
+  constructor(first_name, last_name, email, age, reports, title, bonus){
+    super(first_name, last_name, email, age, reports)
+    this.title = "Not a manager"
+    this.bonus = 0
   }
 }
 
